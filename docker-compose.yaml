@@ -1,0 +1,16 @@
+
+
+services:
+  backend:
+    image: my-app-backend:prod-v1.0.0
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+  
+  frontend:
+    image: my-app-frontend:prod-v1.0.0
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
